@@ -2,24 +2,24 @@
 const OfflineMiddleware = store => {
   if(navigator.onLine){
     store.dispatch({
-      type: "@@redux-offline/INIT/CONNECTED"
+      type: "@@redux-if-offline/INIT/CONNECTED"
     })
   } else {
     store.dispatch({
-      type: "@@redux-offline/INIT/DISCONNECTED"
+      type: "@@redux-if-offline/INIT/DISCONNECTED"
     })
   }
 
   if(window.onoffline && window.ononline) {
     window.onoffline = e => {
       store.dispatch({
-        type: "@@redux-offline/DISCONNECTED"
+        type: "@@redux-if-offline/DISCONNECTED"
       })
     }
 
     window.ononline = e => {
       store.dispatch({
-        type: "@@redux-offline/CONNECTED"
+        type: "@@redux-if-offline/CONNECTED"
       })
     }
   } else {
@@ -31,11 +31,11 @@ const OfflineMiddleware = store => {
 
 const OfflineReducer = (state = {offline: undefined}, action) => {
     switch (action.type){
-      case "@@redux-offline/INIT/CONNECTED":
-      case "@@redux-offline/CONNECTED":
+      case "@@redux-if-offline/INIT/CONNECTED":
+      case "@@redux-if-offline/CONNECTED":
         return { offline: false }
-      case "@@redux-offline/INIT/DISCONNECTED":
-      case "@@redux-offline/DISCONNECTED":
+      case "@@redux-if-offline/INIT/DISCONNECTED":
+      case "@@redux-if-offline/DISCONNECTED":
         return { offline: true }
       default: 
         return state

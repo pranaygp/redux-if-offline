@@ -1,4 +1,4 @@
-# redux-offline
+# redux-if-offline
 
 A super simple redux package (providing middleware and a reducer) to keep track of navigator online-offline status.
 
@@ -7,10 +7,10 @@ A super simple redux package (providing middleware and a reducer) to keep track 
 Easy:
 
 ``` bash
-yarn add redux-offline
+yarn add redux-if-offline
 
 # if you don't have yarn
-npm install redux-offline
+npm install redux-if-offline
 ```
 
 ## Cool how do I use it
@@ -19,7 +19,7 @@ When you set up your redux store, make sure you add our middleware (and reducer)
 
 ``` javascript
 const { createStore, applyMiddleware, combineReducers } = require('redux')
-const { OfflineMiddleware, OfflineReducer } = require('redux-offline')
+const { OfflineMiddleware, OfflineReducer } = require('redux-if-offline')
 
 const store = createStore(
   combineReducers({
@@ -36,11 +36,11 @@ const store = createStore(
 
 As soon as your redux store is setup, it'll dispatch an event with one of these types:
 
-**@@redux-offline/INIT/CONNECTED** OR **@@redux-offline/INIT/DISCONNECTED**
+**@@redux-if-offline/INIT/CONNECTED** OR **@@redux-if-offline/INIT/DISCONNECTED**
 
 While a user is using your app, if their internet connection ever disconnects, an action with one of these types is dispatched:
 
-**@@redux-offline/CONNECTED** OR **@@redux-offline/DISCONNECTED**
+**@@redux-if-offline/CONNECTED** OR **@@redux-if-offline/DISCONNECTED**
 
 You can have your own reducers catch these actions and update your state :)
 
