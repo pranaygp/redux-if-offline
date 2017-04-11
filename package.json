@@ -1,7 +1,7 @@
 {
   "name": "redux-if-offline",
-  "version": "0.9.0",
-  "description": "A simpple redux middleware and reducer to keep track of navigator online/offline status",
+  "version": "0.9.1",
+  "description": "Simple redux middleware and reducer to keep track of navigator online/offline status",
   "main": "index.js",
   "scripts": {
     "test": "karma start --single-run"
