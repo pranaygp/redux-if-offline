@@ -1,0 +1,24 @@
+{
+  "name": "redux-offline",
+  "version": "0.9.0",
+  "description": "A simpple redux middleware and reducer to keep track of navigator online/offline status",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start --single-run"
+  },
+  "author": "Pranay Prakash <pranay.gp@gmail.com> (http://pranay.gp)",
+  "license": "MIT",
+  "dependencies": {
+    "offline-js": "^0.7.18"
+  },
+  "devDependencies": {
+    "browserify": "^14.3.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "redux": "^3.6.0",
+    "watchify": "^3.9.0"
+  }
+}
