@@ -74,7 +74,7 @@ import { connect } from 'react-redux'
 
 class OfflineIndicator extends React.Component {
   render(){
-    return (this.props.state.reduxOffline.offline ? <div>You're currently offline. All messages sent will be cached and sent when you reconnect.</div> : null)
+    return (this.props.state.reduxOffline.offline ? <div>You are currently offline. All messages sent will be cached and sent when you reconnect.</div> : null)
   }
 }
 
